@@ -5,7 +5,8 @@ from pyspark.sql.function import col, lower, when
 
 spark = SparkSession.builder.appName("PokemonEbayAnalytics").getOrCreate()
 
-BASE_URL = ("")
+BASE_URL = ("https://www.ebay.co.uk/sch/i.html?_nkw=pokemon+prismatic+evolutions+%22elite+trainer+box%22+%22etb%22"
+            "&_sacat=0&_from=R40&LH_Sold=2&LH_Complete=1&_ipg=240&rt=nc&_udhi=250")
 
 
 def scrape_ebay_pages(base_url, max_pages=0):
