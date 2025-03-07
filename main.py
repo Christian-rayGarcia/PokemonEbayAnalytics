@@ -41,3 +41,9 @@ def scrape_ebay_pages(base_url, max_pages=0):
                 all_results.append([date_cleaned, title_text.text.strip(), price_cleaned])
 
     return all_results
+
+
+# after checking how many sold pages input below the max pages
+max_pages = 0
+data = scrape_ebay_pages(BASE_URL, max_pages)
+
